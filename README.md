@@ -1,2 +1,2 @@
 # VSLive2016-Redmond
-Demo and support file for my Visual Studio Live 2016 talks in Redmond, WA.
+Demo and support files for my Visual Studio Live 2016 talks in Redmond, WA.
