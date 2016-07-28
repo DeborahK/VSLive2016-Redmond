@@ -2,7 +2,7 @@
   "name": "movie-hunter",
   "version": "1.0.0",
   "author": "Deborah Kurata",
-  "description": "Take 2: Building Components for the Movie Hunter Application",
+  "description": "Take 5: Movie Hunter Application with Form",
   "scripts": {
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
     "tsc": "tsc",
@@ -17,6 +17,7 @@
     "@angular/common":  "2.0.0-rc.4",
     "@angular/compiler":  "2.0.0-rc.4",
     "@angular/core":  "2.0.0-rc.4",
+    "@angular/forms": "0.2.0",
     "@angular/http":  "2.0.0-rc.4",
     "@angular/platform-browser":  "2.0.0-rc.4",
     "@angular/platform-browser-dynamic":  "2.0.0-rc.4",

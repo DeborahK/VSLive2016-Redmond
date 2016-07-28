@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 
+import { MovieService } from './movies/movie.service';
+
 @Component({
     selector: 'mh-app',
     template: `
@@ -9,7 +11,8 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
         <router-outlet></router-outlet>
      </div>
     `,
-    directives: [ROUTER_DIRECTIVES]
+    directives: [ROUTER_DIRECTIVES],
+    providers: [MovieService]
 })
 export class AppComponent {
     pageTitle: string = 'InStep Movie Hunter';

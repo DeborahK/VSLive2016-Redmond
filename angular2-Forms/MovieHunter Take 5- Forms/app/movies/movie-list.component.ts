@@ -1,12 +1,15 @@
-import { Component, OnInit }  from '@angular/core';
+import {Component, OnInit}  from '@angular/core';
+import {ROUTER_DIRECTIVES} from '@angular/router';
 
 import { IMovie } from './movie';
 import { MovieService } from './movie.service';
 import { MovieFilterPipe } from './movieFilter.pipe';
+import { StarComponent } from '../shared/star.component';
 
 @Component({
     templateUrl: 'app/movies/movie-list.component.html',
     styleUrls: ['app/movies/movie-list.component.css'],
+    directives: [ROUTER_DIRECTIVES, StarComponent],
     pipes: [MovieFilterPipe]
 })
 export class MovieListComponent implements OnInit {
@@ -22,7 +25,10 @@ export class MovieListComponent implements OnInit {
     ngOnInit() { this.getMovies(); }
 
     getMovies() {
-        this.movies = this._movieService.getMovies();
+        this._movieService.getMovies()
+            .subscribe(
+                (movies: IMovie[]) => this.movies = movies,
+                (error: any) => this.errorMessage = <any>error);
     }
 
     toggleImage(): void {
