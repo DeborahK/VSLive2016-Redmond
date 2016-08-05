@@ -51,8 +51,4 @@ export class MovieListComponent {
     toggleImage(): void {
         this.showImage = !this.showImage;
     }
-
-    convertToDate(dateString: string): Date {
-        return new Date(dateString);
-    }
 }
